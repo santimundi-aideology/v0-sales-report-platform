@@ -270,6 +270,42 @@ export function statusBadge(value: unknown) {
   )
 }
 
+/**
+ * 3-tier status badge based on YoY projected comparison:
+ * Green: above last year (yoyProjected >= 0)
+ * Orange: 10% or more below last year (-30 < yoyProjected < 0)
+ * Red: 30% or more below last year (yoyProjected <= -30)
+ */
+export function yoyStatusBadge(yoyProjected: number) {
+  let variant: { className: string; label: string }
+  if (yoyProjected >= 0) {
+    variant = { className: "bg-success/10 text-success", label: "Healthy" }
+  } else if (yoyProjected > -10) {
+    variant = { className: "bg-success/10 text-success", label: "Healthy" }
+  } else if (yoyProjected > -30) {
+    variant = { className: "bg-warning/10 text-warning", label: "At Risk" }
+  } else {
+    variant = { className: "bg-destructive/10 text-destructive", label: "Critical" }
+  }
+  return (
+    <Badge className={cn("text-[10px] font-medium", variant.className)}>
+      {variant.label}
+    </Badge>
+  )
+}
+
+export function euroFormat(value: unknown) {
+  const num = Number(value)
+  if (isNaN(num)) return value
+  if (Math.abs(num) >= 1_000_000) {
+    return `€${(num / 1_000_000).toFixed(1)}M`
+  }
+  if (Math.abs(num) >= 1_000) {
+    return `€${(num / 1_000).toFixed(0)}K`
+  }
+  return `€${num.toLocaleString()}`
+}
+
 // Currency formatter helper
 export function currencyFormat(value: unknown) {
   const num = Number(value)

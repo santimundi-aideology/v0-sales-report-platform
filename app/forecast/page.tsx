@@ -94,19 +94,19 @@ const forecastTrendData = [
 
 // Regional Forecast Breakdown
 const regionalForecast = [
-  { name: "Americas", actual: 52100, forecast: 54500 },
-  { name: "APAC", actual: 45200, forecast: 48200 },
-  { name: "EMEA", actual: 38500, forecast: 36800 },
-  { name: "LATAM", actual: 12050, forecast: 13500 },
+  { name: "Central Europe", actual: 46500, forecast: 45200 },
+  { name: "Eastern Europe", actual: 18000, forecast: 19500 },
+  { name: "Adriatics", actual: 16250, forecast: 15800 },
+  { name: "Western Balkans", actual: 12500, forecast: 13100 },
 ]
 
 // Forecast accuracy by partner
 const partnerAccuracyData = [
-  { partner: "TechCorp Ltd", accuracy: 92, bias: -2.5 },
-  { partner: "GlobalTech Inc", accuracy: 88, bias: 4.2 },
-  { partner: "Innovate Solutions", accuracy: 85, bias: -8.5 },
-  { partner: "NextGen Systems", accuracy: 78, bias: 12.1 },
-  { partner: "Digital Partners", accuracy: 91, bias: 1.8 },
+  { partner: "Alza.cz", accuracy: 92, bias: -2.5 },
+  { partner: "eMAG.ro", accuracy: 88, bias: 4.2 },
+  { partner: "Datart.sk", accuracy: 85, bias: -8.5 },
+  { partner: "Tehnomanija", accuracy: 78, bias: 12.1 },
+  { partner: "Big Bang", accuracy: 91, bias: 1.8 },
 ]
 
 // Scenario summary
@@ -118,12 +118,12 @@ const scenarioData = [
 
 // Detailed forecast table
 const forecastTableData = [
-  { product: "Product A Pro", partner: "TechCorp Ltd", region: "APAC", currentStock: 8520, aiForecast: 9250, partnerForecast: 8800, variance: 5.1, accuracy: 92, status: "Aligned" },
-  { product: "Product A Pro", partner: "GlobalTech Inc", region: "EMEA", currentStock: 6280, aiForecast: 6850, partnerForecast: 7200, variance: -4.9, accuracy: 88, status: "Under" },
-  { product: "Product B Max", partner: "Innovate Solutions", region: "Americas", currentStock: 980, aiForecast: 11200, partnerForecast: 9500, variance: 17.9, accuracy: 78, status: "Critical" },
-  { product: "Product B Max", partner: "NextGen Systems", region: "APAC", currentStock: 3200, aiForecast: 4850, partnerForecast: 5200, variance: -6.7, accuracy: 85, status: "Under" },
-  { product: "Product C Elite", partner: "Digital Partners", region: "EMEA", currentStock: 1650, aiForecast: 5920, partnerForecast: 5800, variance: 2.1, accuracy: 91, status: "Aligned" },
-  { product: "Product C Elite", partner: "TechCorp Ltd", region: "Americas", currentStock: 1280, aiForecast: 4280, partnerForecast: 4100, variance: 4.4, accuracy: 89, status: "Aligned" },
+  { product: "iPhone 16 Pro Max", partner: "Alza.cz", region: "Central Europe", currentStock: 8520, aiForecast: 9250, partnerForecast: 8800, variance: 5.1, accuracy: 92, status: "Aligned" },
+  { product: "MacBook Air M3", partner: "eMAG.ro", region: "Eastern Europe", currentStock: 6280, aiForecast: 6850, partnerForecast: 7200, variance: -4.9, accuracy: 88, status: "Under" },
+  { product: "AirPods Pro 2", partner: "Datart.sk", region: "Central Europe", currentStock: 980, aiForecast: 11200, partnerForecast: 9500, variance: 17.9, accuracy: 78, status: "Critical" },
+  { product: "iPhone 16", partner: "Tehnomanija", region: "Western Balkans", currentStock: 3200, aiForecast: 4850, partnerForecast: 5200, variance: -6.7, accuracy: 85, status: "Under" },
+  { product: "MacBook Pro M3", partner: "Big Bang", region: "Adriatics", currentStock: 1650, aiForecast: 5920, partnerForecast: 5800, variance: 2.1, accuracy: 91, status: "Aligned" },
+  { product: "iPad Air M2", partner: "Technomarket", region: "Eastern Europe", currentStock: 1280, aiForecast: 4280, partnerForecast: 4100, variance: 4.4, accuracy: 89, status: "Aligned" },
 ]
 
 const forecastTableColumns = [

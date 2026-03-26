@@ -84,10 +84,10 @@ const campaignTrendData = [
 
 // Partner campaign performance
 const partnerPerformance = [
-  { name: "TechCorp Ltd", actual: 185000, forecast: 160000 },
-  { name: "GlobalTech Inc", actual: 142000, forecast: 150000 },
-  { name: "Innovate Solutions", actual: 128000, forecast: 120000 },
-  { name: "NextGen Systems", actual: 95000, forecast: 110000 },
+  { name: "Alza.cz", actual: 185000, forecast: 160000 },
+  { name: "eMAG.ro", actual: 142000, forecast: 150000 },
+  { name: "Technomarket", actual: 128000, forecast: 120000 },
+  { name: "Big Bang", actual: 95000, forecast: 110000 },
 ]
 
 // Top campaigns by ROI
@@ -141,12 +141,14 @@ const activeCampaigns = [
 
 // Detailed campaign table
 const campaignTableData = [
-  { campaign: "Q2 Summer Sale", partner: "TechCorp Ltd", country: "USA", type: "BDF", investment: 185000, sellOut: 28500, lift: 32, roi: 3.8, status: "Active" },
-  { campaign: "Q2 Summer Sale", partner: "GlobalTech Inc", country: "Germany", type: "BDF", investment: 142000, sellOut: 21200, lift: 25, roi: 3.2, status: "Active" },
-  { campaign: "Partner Boost", partner: "Innovate Solutions", country: "Japan", type: "ATL", investment: 128000, sellOut: 18500, lift: 28, roi: 2.9, status: "Active" },
-  { campaign: "Partner Boost", partner: "NextGen Systems", country: "UK", type: "ATL", investment: 95000, sellOut: 14200, lift: 22, roi: 2.8, status: "Active" },
-  { campaign: "Digital Push", partner: "Digital Partners", country: "Singapore", type: "AD Fund", investment: 85000, sellOut: 15800, lift: 35, roi: 4.2, status: "Active" },
-  { campaign: "Flash Sale Feb", partner: "TechCorp Ltd", country: "Australia", type: "BDF", investment: 62000, sellOut: 9850, lift: 18, roi: 2.4, status: "Completed" },
+  { campaign: "Q2 Summer Sale", partner: "Alza.cz", country: "Czech Republic", type: "BDF", investment: 185000, sellOut: 28500, lift: 32, roi: 3.8, status: "Active" },
+  { campaign: "Q2 Summer Sale", partner: "eMAG.ro", country: "Romania", type: "BDF", investment: 142000, sellOut: 21200, lift: 25, roi: 3.2, status: "Active" },
+  { campaign: "Partner Boost", partner: "Technomarket", country: "Bulgaria", type: "ATL", investment: 128000, sellOut: 18500, lift: 28, roi: 2.9, status: "Active" },
+  { campaign: "Partner Boost", partner: "Big Bang", country: "Slovenia", type: "ATL", investment: 95000, sellOut: 14200, lift: 22, roi: 2.8, status: "Active" },
+  { campaign: "Digital Push", partner: "Tehnomanija", country: "Serbia", type: "AD Fund", investment: 85000, sellOut: 15800, lift: 35, roi: 4.2, status: "Active" },
+  { campaign: "Digital Push", partner: "Gjirafa50", country: "Kosovo", type: "AD Fund", investment: 76000, sellOut: 12100, lift: 29, roi: 3.6, status: "Active" },
+  { campaign: "Flash Sale Feb", partner: "Neptun Albania", country: "Albania", type: "BDF", investment: 62000, sellOut: 9850, lift: 18, roi: 2.4, status: "Completed" },
+  { campaign: "Spring Promo", partner: "Multicom ME", country: "Montenegro", type: "BDF", investment: 54000, sellOut: 8740, lift: 20, roi: 2.7, status: "Completed" },
 ]
 
 const campaignTableColumns = [
@@ -187,7 +189,7 @@ const aiRecommendations = [
   },
   {
     title: "Partner Optimization",
-    description: "TechCorp Ltd campaigns consistently outperform by 25%. Recommend increased budget share.",
+    description: "Alza.cz campaigns consistently outperform by 25%. Recommend increased budget share.",
     impact: "medium",
   },
 ]

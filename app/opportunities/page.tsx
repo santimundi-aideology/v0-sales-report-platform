@@ -37,20 +37,20 @@ const sampleConversation = [
     role: "assistant",
     content: `Based on my analysis of Q2 FY25 data, I've identified **3 key areas of underperformance**:
 
-**1. EMEA Region** (-3.8% vs forecast)
-- Primary driver: Germany and UK markets showing softer demand
-- Products affected: Product B Max and Product C Elite
-- Partner concern: GlobalTech Inc at 88% of target
+**1. Eastern Europe** (-3.8% vs forecast)
+- Primary driver: Romania and Bulgaria showing softer demand
+- Products affected: iPad Pro M4 and iPad Air M2
+- Partner concern: eMAG.ro at 88% of target
 
-**2. LATAM Expansion** (-14% vs forecast)
-- New market entry challenges in Brazil
+**2. Western Balkans Expansion** (-14% vs forecast)
+- New market entry challenges in Bosnia & Herzegovina, Montenegro, Kosovo, and Albania
 - Partner onboarding delays affecting sell-through
 - Recommend: Increase channel support investment
 
-**3. Enterprise LOB** (-5.2% vs forecast)
-- Longer sales cycles than projected
-- Competitive pressure in key accounts
-- Action: Review pricing strategy for enterprise deals
+**3. Accessories LOB** (-5.2% vs forecast)
+- Slower-than-expected premium attach in secondary markets
+- Competitive pressure on entry price points
+- Action: Review bundle strategy for accessories and Apple Watch
 
 Would you like me to drill down into any of these areas?`,
     citations: ["Q2 FY25 Sales Report", "Regional Performance Dashboard", "Partner Scorecard"],
@@ -66,20 +66,20 @@ Would you like me to drill down into any of these areas?`,
 **High Confidence (>85% probability)**
 | Partner | Current 4W Rate | Projected 4W | Confidence |
 |---------|-----------------|--------------|------------|
-| TechCorp Ltd | 48.2K | 52.5K | 92% |
-| Innovate Solutions | 47.8K | 51.2K | 87% |
+| Alza.cz | 48.2K | 52.5K | 92% |
+| eMAG.ro | 47.8K | 51.2K | 87% |
 
 **Medium Confidence (70-85% probability)**
 | Partner | Current 4W Rate | Projected 4W | Confidence |
 |---------|-----------------|--------------|------------|
-| GlobalTech Inc | 42.5K | 48.8K | 78% |
+| Datart.sk | 42.5K | 48.8K | 78% |
 
-**Key Factors for TechCorp Ltd:**
+**Key Factors for Alza.cz:**
 - Strong Q2 campaign momentum (+32% lift)
 - New product launch driving incremental demand
 - Favorable inventory position (5.2 WoS)
 
-**Recommendation:** Allocate additional 3K units to TechCorp Ltd to capture upside opportunity.`,
+**Recommendation:** Allocate additional 3K units to Alza.cz to capture upside opportunity.`,
     citations: ["Partner Forecast Model", "Historical Sell-Out Data", "Inventory Analysis"],
   },
 ]
@@ -99,8 +99,8 @@ const recommendations = [
   {
     type: "opportunity",
     title: "Stock Allocation Opportunity",
-    partner: "TechCorp Ltd",
-    product: "Product A Pro",
+    partner: "Alza.cz",
+    product: "iPhone 16 Pro Max",
     description: "28% above-forecast sell-out velocity suggests allocation increase of 500 units.",
     impact: "+$125K revenue potential",
     confidence: 92,
@@ -109,8 +109,8 @@ const recommendations = [
   {
     type: "risk",
     title: "Low Stock Alert",
-    partner: "Innovate Solutions",
-    product: "Product B Max",
+    partner: "Datart.sk",
+    product: "AirPods Pro 2",
     description: "Current stock depletes in 1.8 weeks at current velocity. Urgent refill needed.",
     impact: "$85K revenue at risk",
     confidence: 95,
@@ -119,8 +119,8 @@ const recommendations = [
   {
     type: "opportunity",
     title: "Campaign Timing",
-    partner: "GlobalTech Inc",
-    product: "Product C Elite",
+    partner: "eMAG.ro",
+    product: "iPad Pro M4",
     description: "Historical data suggests 15% better ROI with campaign launch in W2 vs W4.",
     impact: "+$42K incremental ROI",
     confidence: 78,
@@ -129,7 +129,7 @@ const recommendations = [
   {
     type: "action",
     title: "Forecast Adjustment",
-    partner: "NextGen Systems",
+    partner: "Tehnomanija",
     product: "All Products",
     description: "Partner forecast consistently 12% optimistic. Recommend AI-adjusted baseline.",
     impact: "Improved accuracy 88%→94%",
@@ -140,12 +140,12 @@ const recommendations = [
 
 // Stock health classifications
 const stockHealthData = [
-  { product: "Product A Pro", partner: "TechCorp Ltd", stock: 8520, wos: 5.2, velocity: 1640, status: "OK", refill: "No action needed" },
-  { product: "Product B Max", partner: "Innovate Solutions", stock: 980, wos: 1.8, velocity: 545, status: "Critical", refill: "Urgent: +2000 units" },
-  { product: "Product C Elite", partner: "Digital Partners", stock: 1650, wos: 4.5, velocity: 367, status: "OK", refill: "No action needed" },
-  { product: "Product D Basic", partner: "GlobalTech Inc", stock: 580, wos: 3.2, velocity: 181, status: "Low", refill: "Recommend: +500 units" },
-  { product: "Product B Max", partner: "NextGen Systems", stock: 3200, wos: 8.2, velocity: 390, status: "High", refill: "Consider rebalance" },
-  { product: "Product E Lite", partner: "TechCorp Ltd", stock: 2850, wos: 6.8, velocity: 419, status: "OK", refill: "No action needed" },
+  { product: "iPhone 16 Pro Max", partner: "Alza.cz", stock: 8520, wos: 5.2, velocity: 1640, status: "OK", refill: "No action needed" },
+  { product: "AirPods Pro 2", partner: "Datart.sk", stock: 980, wos: 1.8, velocity: 545, status: "Critical", refill: "Urgent: +2000 units" },
+  { product: "MacBook Pro M3", partner: "Big Bang", stock: 1650, wos: 4.5, velocity: 367, status: "OK", refill: "No action needed" },
+  { product: "iPad Air M2", partner: "Technomarket", stock: 580, wos: 3.2, velocity: 181, status: "Low", refill: "Recommend: +500 units" },
+  { product: "iPhone 16", partner: "Tehnomanija", stock: 3200, wos: 8.2, velocity: 390, status: "High", refill: "Consider rebalance" },
+  { product: "MacBook Air M2", partner: "Neptun Albania", stock: 2850, wos: 6.8, velocity: 419, status: "OK", refill: "No action needed" },
 ]
 
 const stockTableColumns = [

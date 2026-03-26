@@ -1,0 +1,277 @@
+# APCOM Platform — Cursor Rules & Style Guide
+
+> Every file generated or modified by Cursor will follow the APCOM brand system below.
+
+---
+
+## 1. PROJECT CONTEXT
+
+You are building a web platform for **APCOM**, an Apple Authorised Distributor operating across Central & Eastern Europe (Romania, Bulgaria, Hungary, Czech Republic, Slovakia, Croatia, Serbia, Slovenia, Bosnia & Herzegovina, Montenegro, Kosovo, and Albania). APCOM is part of the Midis Group.
+
+The platform is a **B2B distribution portal** serving authorized resellers and partners. The visual identity must feel **premium, clean, and Apple-adjacent** — professional without being sterile, modern without being trendy.
+
+---
+
+## 2. DESIGN PHILOSOPHY
+
+Follow these principles in every UI decision:
+
+- **Clean & minimal**: Generous whitespace, clear hierarchy, no visual clutter.
+- **Apple-adjacent aesthetic**: The brand sits next to Apple products — the UI must feel worthy of that context. Think apple.com editorial quality.
+- **Green as the action color**: APCOM's signature green (#5CB85C) is used exclusively for primary CTAs, success states, and key highlights. Never overuse it — it should pop when it appears.
+- **Dark contrast blocks**: Use dark backgrounds (#222222) for hero sections, footers, and emphasis blocks to create rhythm.
+- **Soft depth**: Rounded corners (8–12px), subtle shadows, smooth hover transitions. No hard edges or flat brutalism.
+- **Content-first**: Let data and products breathe. UI serves the content, not the other way around.
+
+---
+
+## 3. COLOR SYSTEM
+
+Use CSS custom properties everywhere. Never hardcode hex values inline — always reference the design tokens below.
+
+### 3.1 CSS Variables
+
+```css
+:root {
+  /* ── Core Brand ── */
+  --apcom-black:        #1A1A1A;
+  --apcom-dark:         #222222;
+  --apcom-charcoal:     #333333;
+  --apcom-slate:        #4A4A4A;
+
+  /* ── Signature Green (primary accent) ── */
+  --apcom-green:        #5CB85C;
+  --apcom-green-hover:  #4CAE4C;
+  --apcom-green-dark:   #3D8B3D;
+  --apcom-green-light:  #8ED08E;
+
+  /* ── Blue Accent (links & interactive) ── */
+  --apcom-blue:         #2A7DE1;
+  --apcom-blue-hover:   #1A6DD1;
+  --apcom-blue-light:   #EBF3FD;
+
+  /* ── Neutral Scale ── */
+  --apcom-white:        #FFFFFF;
+  --apcom-off-white:    #F8F8F8;
+  --apcom-light-gray:   #F0F0F0;
+  --apcom-mid-gray:     #E0E0E0;
+  --apcom-gray:         #999999;
+  --apcom-dark-gray:    #666666;
+
+  /* ── Semantic ── */
+  --apcom-success:      #5CB85C;
+  --apcom-warning:      #F0AD4E;
+  --apcom-danger:       #D9534F;
+  --apcom-info:         #5BC0DE;
+
+  /* ── Typography ── */
+  --font-heading: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body:    'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono:    'SF Mono', 'Fira Code', 'Consolas', monospace;
+
+  /* ── Spacing Scale ── */
+  --space-xs:   4px;
+  --space-sm:   8px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  /* ── Border Radius ── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+  --radius-pill: 999px;
+
+  /* ── Shadows ── */
+  --shadow-sm:  0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md:  0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg:  0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-xl:  0 20px 60px rgba(0, 0, 0, 0.15);
+}
+```
+
+### 3.2 Color Usage Rules
+
+| Token                  | When to use                                         |
+|------------------------|-----------------------------------------------------|
+| `--apcom-black`        | Page headings (h1, h2), navbar logo text             |
+| `--apcom-dark`         | Dark section backgrounds, footer background          |
+| `--apcom-charcoal`     | Default body text                                    |
+| `--apcom-slate`        | Secondary text, nav links, descriptions              |
+| `--apcom-green`        | Primary buttons, active nav items, success badges    |
+| `--apcom-green-hover`  | Button hover states only                             |
+| `--apcom-green-dark`   | Button active/pressed states                         |
+| `--apcom-green-light`  | Tag backgrounds, light success backgrounds           |
+| `--apcom-blue`         | Text links, secondary interactive elements           |
+| `--apcom-blue-hover`   | Link hover states                                    |
+| `--apcom-blue-light`   | Info banners, tooltip backgrounds                    |
+| `--apcom-off-white`    | Alternating section backgrounds                      |
+| `--apcom-light-gray`   | Card borders, dividers, section separators            |
+| `--apcom-mid-gray`     | Input borders (default state)                        |
+| `--apcom-gray`         | Placeholder text, captions, overlines                |
+| `--apcom-dark-gray`    | Card descriptions, meta information                  |
+
+### 3.3 Color DON'Ts
+
+- NEVER use raw hex values — always use CSS variables.
+- NEVER use the green for backgrounds of large areas — it's an accent, not a theme color.
+- NEVER mix multiple bright accent colors in the same component.
+- NEVER use pure black (#000000) — use `--apcom-black` (#1A1A1A) instead.
+
+---
+
+## 4. TYPOGRAPHY
+
+### 4.1 Font Stack
+
+- **Primary font**: `DM Sans` (Google Fonts) for both headings and body.
+- **Monospace**: `SF Mono` → `Fira Code` → `Consolas` for code blocks and technical data.
+- **Import**: `https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap`
+
+### 4.2 Type Scale
+
+| Level       | Size     | Weight | Line Height | Letter Spacing | Usage                        |
+|-------------|----------|--------|-------------|----------------|------------------------------|
+| H1          | 2.4rem   | 700    | 1.15        | -0.03em        | Page titles, hero headings   |
+| H2          | 1.8rem   | 600    | 1.25        | -0.02em        | Section headings             |
+| H3          | 1.35rem  | 600    | 1.35        | normal         | Subsection headings          |
+| H4          | 1.1rem   | 600    | 1.4         | normal         | Card titles, dialog titles   |
+| Body Large  | 1.05rem  | 400    | 1.6         | normal         | Lead paragraphs, intros      |
+| Body        | 0.9rem   | 400    | 1.6         | normal         | Default body text            |
+| Body Small  | 0.82rem  | 400    | 1.55        | normal         | Descriptions, meta text      |
+| Caption     | 0.75rem  | 500    | 1.4         | 0.05em         | Overlines, labels (UPPERCASE)|
+| Overline    | 0.7rem   | 600    | 1.4         | 0.15em         | Section labels (UPPERCASE)   |
+
+### 4.3 Typography Rules
+
+- Always use `-webkit-font-smoothing: antialiased` on the body.
+- Headings use **tight** negative letter-spacing for a premium feel.
+- Body text uses `--apcom-charcoal` (#333), NOT black.
+- Captions and overlines are always UPPERCASE with letter-spacing.
+- Never use font sizes smaller than 0.7rem.
+
+---
+
+## 5. COMPONENT PATTERNS
+
+### 5.1 Buttons
+
+- Primary actions (submit, save, confirm) → green background (`--apcom-green`)
+- Secondary/navigation actions → dark or outline variant
+- Tertiary/text actions → ghost variant
+- Destructive actions → red variant using `--apcom-danger`
+- All buttons get `translateY(-1px)` + shadow on hover for micro-lift effect
+- Border radius: `--radius-md` (8px)
+- Font: 600 weight, 0.85rem
+
+### 5.2 Cards
+
+- Always have a 1px border using `--apcom-light-gray`
+- Always use `border-radius: 12px`
+- Hover state: lift 3px + large shadow
+- Card tags/badges use green light background: `background: rgba(92, 184, 92, 0.1); color: var(--apcom-green);`
+- Card body padding: 24px
+
+### 5.3 Form Inputs
+
+- Focus state always uses green border + green glow ring
+- Labels: 0.78rem, font-weight 600, `--apcom-charcoal`
+- Error state: `--apcom-danger` border + red glow ring
+- Never use background colors on inputs — keep them white
+- Border: 1.5px solid `--apcom-mid-gray`
+
+### 5.4 Navigation
+
+- White background with subtle bottom border or shadow
+- Logo: "apcom" wordmark in `--apcom-black`, with a green dot accent
+- Nav links: `--apcom-slate`, 0.82rem, font-weight 500
+- Active link: `--apcom-green`, font-weight 600
+- CTA button in nav: green, small, pill-shaped
+
+### 5.5 Dark Sections
+
+- Background: `--apcom-dark` (#222222)
+- Border radius: 12px
+- Padding: 48px 32px
+- Text: white, paragraphs #AAAAAA
+- Use for: hero CTAs, partner program banners, footer, testimonial blocks
+
+### 5.6 Tables (for data-heavy B2B views)
+
+- Headers: uppercase, 0.72rem, letter-spacing 0.08em, `--apcom-gray`
+- Rows: hover background `--apcom-off-white`
+- Cell borders: 1px solid `--apcom-light-gray`
+- Font size: 0.85rem
+
+### 5.7 Badges & Tags
+
+- Font size: 0.65rem, uppercase, letter-spacing 0.1em
+- Padding: 3px 8px
+- Border radius: 4px
+- Green: `rgba(92, 184, 92, 0.1)` bg, `--apcom-green` text
+- Blue: `rgba(42, 125, 225, 0.1)` bg, `--apcom-blue` text
+- Red: `rgba(217, 83, 79, 0.1)` bg, `--apcom-danger` text
+- Yellow: `rgba(240, 173, 78, 0.1)` bg, `--apcom-warning` text
+
+---
+
+## 6. LAYOUT & SPACING
+
+- **Max content width**: 1200px, centered with auto margins
+- **Page padding**: 24px on mobile, 48px on desktop
+- **Section spacing**: 96px between major sections
+- **Card grids**: `display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;`
+- **Always use the spacing scale** — never use arbitrary pixel values
+
+---
+
+## 7. INTERACTION & MOTION
+
+- **Transitions**: Always `0.2s ease` for hover states
+- **Hover lift**: Buttons and cards lift with `transform: translateY(-Npx)` + shadow increase
+- **Focus rings**: Green glow using `box-shadow: 0 0 0 3px rgba(92, 184, 92, 0.15)`
+- **Page loads**: Use subtle fade-in (`opacity 0→1, translateY 8px→0`) for content sections
+- **No jarring animations** — everything should feel smooth and intentional
+
+---
+
+## 8. SHADCN/UI THEME MAPPING
+
+This project uses shadcn/ui with Tailwind CSS v4. The theme is configured via CSS variables in `app/globals.css`.
+
+Light mode (`:root`) maps APCOM brand colors to shadcn variables:
+- `--primary` → APCOM green (#5CB85C)
+- `--foreground` → APCOM charcoal (#333333)
+- `--background` → white (#FFFFFF)
+- `--muted` → light gray (#F0F0F0)
+- `--destructive` → APCOM danger (#D9534F)
+- `--border` / `--input` → mid gray (#E0E0E0)
+- `--ring` → APCOM green (focus rings)
+
+Dark mode (`.dark`) maps:
+- `--background` → APCOM dark (#222222)
+- `--foreground` → near-white (#F0F0F0)
+- `--border` → #3A3A3A
+- Primary, ring, destructive stay the same
+
+---
+
+## 9. CHECKLIST — BEFORE GENERATING ANY UI
+
+Before writing any component, page, or layout, verify:
+
+- [ ] Using CSS variables (or Tailwind tokens) — no raw hex values
+- [ ] Font is DM Sans — loaded via next/font/google
+- [ ] Primary CTA buttons are green (`--apcom-green` / `bg-primary`)
+- [ ] Body text is charcoal (#333333), NOT black
+- [ ] Cards have 12px radius, 1px light-gray border, hover lift
+- [ ] Inputs focus with green border + green glow
+- [ ] Dark sections use `--apcom-dark` (#222222)
+- [ ] Spacing uses the design token scale — no arbitrary values
+- [ ] Transitions are 0.2s ease
+- [ ] No pure black (#000000) anywhere
+- [ ] Typography follows the type scale table above

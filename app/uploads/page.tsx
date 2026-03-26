@@ -131,10 +131,10 @@ const fileTypes = [
 
 // Sample preview data
 const previewData = [
-  { partner: "TechCorp Ltd", product: "Product A Pro", sellOut: 2850, stock: 1200, date: "2025-01-15" },
-  { partner: "GlobalTech Inc", product: "Product B Max", sellOut: 1920, stock: 850, date: "2025-01-15" },
-  { partner: "Innovate Solutions", product: "Product C Elite", sellOut: 1450, stock: 620, date: "2025-01-15" },
-  { partner: "NextGen Systems", product: "Product D Basic", sellOut: 980, stock: 420, date: "2025-01-15" },
+  { partner: "Alza.cz", product: "iPhone 16 Pro Max", sellOut: 2850, stock: 1200, date: "2025-01-15" },
+  { partner: "eMAG.ro", product: "iPad Pro M4", sellOut: 1920, stock: 850, date: "2025-01-15" },
+  { partner: "Datart.sk", product: "AirPods Pro 2", sellOut: 1450, stock: 620, date: "2025-01-15" },
+  { partner: "Tehnomanija", product: "iPhone 16", sellOut: 980, stock: 420, date: "2025-01-15" },
 ]
 
 export default function DataUploadsPage() {

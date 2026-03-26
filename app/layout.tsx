@@ -1,15 +1,19 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Geist_Mono } from 'next/font/google'
+import { DM_Sans, Fira_Code } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { InsightProvider } from '@/components/insights/insight-provider'
+import { InsightAnnotator } from '@/components/insights/insight-annotator'
+import { InsightToggle } from '@/components/insights/insight-toggle'
 import './globals.css'
 
-const inter = Inter({ 
+const dmSans = DM_Sans({ 
   subsets: ["latin"],
-  variable: '--font-inter'
+  variable: '--font-dm-sans',
+  weight: ['300', '400', '500', '600', '700'],
 });
-const geistMono = Geist_Mono({ 
+const firaCode = Fira_Code({ 
   subsets: ["latin"],
-  variable: '--font-geist-mono'
+  variable: '--font-fira-code',
 });
 
 export const metadata: Metadata = {
@@ -47,9 +51,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.variable} ${geistMono.variable} font-sans antialiased`}>
-        {children}
+    <html lang="en">
+      <body className={`${dmSans.variable} ${firaCode.variable} font-sans antialiased`}>
+        <InsightProvider>
+          {children}
+          <InsightAnnotator />
+          <InsightToggle />
+        </InsightProvider>
         <Analytics />
       </body>
     </html>

@@ -123,7 +123,7 @@ export function AppHeader({ title, subtitle }: AppHeaderProps) {
                   <span className="text-sm font-medium">Low Stock Alert</span>
                 </div>
                 <p className="text-xs text-muted-foreground">
-                  3 products below safety stock in APAC region
+                  4 products below safety stock across Bosnia & Herzegovina and Montenegro
                 </p>
                 <span className="text-xs text-muted-foreground">2 min ago</span>
               </DropdownMenuItem>
@@ -133,7 +133,7 @@ export function AppHeader({ title, subtitle }: AppHeaderProps) {
                   <span className="text-sm font-medium">Forecast Deviation</span>
                 </div>
                 <p className="text-xs text-muted-foreground">
-                  Partner XYZ sell-out 15% below forecast
+                  eMAG.ro sell-out 15% below forecast
                 </p>
                 <span className="text-xs text-muted-foreground">1 hour ago</span>
               </DropdownMenuItem>

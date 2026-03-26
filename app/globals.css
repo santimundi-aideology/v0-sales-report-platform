@@ -1,93 +1,153 @@
-@import 'tailwindcss';
+@import 'tailwindcss/index.css';
 @import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
-/* APCOM Enterprise Analytics Theme - Dark Mode First */
+/* ══════════════════════════════════════════════════════════
+   APCOM Brand Theme — Light Mode Default
+   Apple Authorised Distributor · Premium B2B Portal
+   ══════════════════════════════════════════════════════════ */
+
 :root {
-  --background: oklch(0.13 0.005 285);
-  --foreground: oklch(0.95 0 0);
-  --card: oklch(0.17 0.005 285);
-  --card-foreground: oklch(0.95 0 0);
-  --popover: oklch(0.17 0.005 285);
-  --popover-foreground: oklch(0.95 0 0);
-  --primary: oklch(0.72 0.19 155);
-  --primary-foreground: oklch(0.13 0.005 285);
-  --secondary: oklch(0.22 0.005 285);
-  --secondary-foreground: oklch(0.95 0 0);
-  --muted: oklch(0.22 0.005 285);
-  --muted-foreground: oklch(0.65 0 0);
-  --accent: oklch(0.72 0.19 155);
-  --accent-foreground: oklch(0.13 0.005 285);
-  --destructive: oklch(0.65 0.2 25);
-  --destructive-foreground: oklch(0.95 0 0);
-  --border: oklch(0.28 0.005 285);
-  --input: oklch(0.22 0.005 285);
-  --ring: oklch(0.72 0.19 155);
-  --chart-1: oklch(0.72 0.19 155);
-  --chart-2: oklch(0.65 0.18 250);
-  --chart-3: oklch(0.75 0.15 85);
-  --chart-4: oklch(0.70 0.2 330);
-  --chart-5: oklch(0.68 0.15 200);
+  /* ── shadcn/ui core ── */
+  --background: #FFFFFF;
+  --foreground: #333333;
+  --card: #FFFFFF;
+  --card-foreground: #333333;
+  --popover: #FFFFFF;
+  --popover-foreground: #333333;
+  --primary: #5CB85C;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F8F8F8;
+  --secondary-foreground: #333333;
+  --muted: #F0F0F0;
+  --muted-foreground: #999999;
+  --accent: #F0F0F0;
+  --accent-foreground: #333333;
+  --destructive: #D9534F;
+  --destructive-foreground: #FFFFFF;
+  --border: #E0E0E0;
+  --input: #E0E0E0;
+  --ring: #5CB85C;
+
+  /* ── Charts ── */
+  --chart-1: #5CB85C;
+  --chart-2: #2A7DE1;
+  --chart-3: #F0AD4E;
+  --chart-4: #5BC0DE;
+  --chart-5: #D9534F;
+
   --radius: 0.5rem;
-  --sidebar: oklch(0.11 0.005 285);
-  --sidebar-foreground: oklch(0.95 0 0);
-  --sidebar-primary: oklch(0.72 0.19 155);
-  --sidebar-primary-foreground: oklch(0.13 0.005 285);
-  --sidebar-accent: oklch(0.18 0.005 285);
-  --sidebar-accent-foreground: oklch(0.95 0 0);
-  --sidebar-border: oklch(0.25 0.005 285);
-  --sidebar-ring: oklch(0.72 0.19 155);
-  
-  /* Custom status colors */
-  --success: oklch(0.72 0.19 155);
-  --success-foreground: oklch(0.13 0.005 285);
-  --warning: oklch(0.80 0.16 85);
-  --warning-foreground: oklch(0.20 0.02 85);
-  --critical: oklch(0.65 0.2 25);
-  --critical-foreground: oklch(0.95 0 0);
-  --info: oklch(0.65 0.18 250);
-  --info-foreground: oklch(0.95 0 0);
+
+  /* ── Sidebar ── */
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #333333;
+  --sidebar-primary: #5CB85C;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F0F0F0;
+  --sidebar-accent-foreground: #333333;
+  --sidebar-border: #E0E0E0;
+  --sidebar-ring: #5CB85C;
+
+  /* ── Semantic status ── */
+  --success: #5CB85C;
+  --success-foreground: #FFFFFF;
+  --warning: #F0AD4E;
+  --warning-foreground: #1A1A1A;
+  --critical: #D9534F;
+  --critical-foreground: #FFFFFF;
+  --info: #5BC0DE;
+  --info-foreground: #FFFFFF;
+
+  /* ── APCOM Brand Tokens ── */
+  --apcom-black: #1A1A1A;
+  --apcom-dark: #222222;
+  --apcom-charcoal: #333333;
+  --apcom-slate: #4A4A4A;
+  --apcom-green: #5CB85C;
+  --apcom-green-hover: #4CAE4C;
+  --apcom-green-dark: #3D8B3D;
+  --apcom-green-light: #8ED08E;
+  --apcom-blue: #2A7DE1;
+  --apcom-blue-hover: #1A6DD1;
+  --apcom-blue-light: #EBF3FD;
+  --apcom-white: #FFFFFF;
+  --apcom-off-white: #F8F8F8;
+  --apcom-light-gray: #F0F0F0;
+  --apcom-mid-gray: #E0E0E0;
+  --apcom-gray: #999999;
+  --apcom-dark-gray: #666666;
+  --apcom-success: #5CB85C;
+  --apcom-warning: #F0AD4E;
+  --apcom-danger: #D9534F;
+  --apcom-info: #5BC0DE;
+
+  /* ── Spacing Scale ── */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
 .dark {
-  --background: oklch(0.13 0.005 285);
-  --foreground: oklch(0.95 0 0);
-  --card: oklch(0.17 0.005 285);
-  --card-foreground: oklch(0.95 0 0);
-  --popover: oklch(0.17 0.005 285);
-  --popover-foreground: oklch(0.95 0 0);
-  --primary: oklch(0.72 0.19 155);
-  --primary-foreground: oklch(0.13 0.005 285);
-  --secondary: oklch(0.22 0.005 285);
-  --secondary-foreground: oklch(0.95 0 0);
-  --muted: oklch(0.22 0.005 285);
-  --muted-foreground: oklch(0.65 0 0);
-  --accent: oklch(0.72 0.19 155);
-  --accent-foreground: oklch(0.13 0.005 285);
-  --destructive: oklch(0.65 0.2 25);
-  --destructive-foreground: oklch(0.95 0 0);
-  --border: oklch(0.28 0.005 285);
-  --input: oklch(0.22 0.005 285);
-  --ring: oklch(0.72 0.19 155);
-  --chart-1: oklch(0.72 0.19 155);
-  --chart-2: oklch(0.65 0.18 250);
-  --chart-3: oklch(0.75 0.15 85);
-  --chart-4: oklch(0.70 0.2 330);
-  --chart-5: oklch(0.68 0.15 200);
-  --sidebar: oklch(0.11 0.005 285);
-  --sidebar-foreground: oklch(0.95 0 0);
-  --sidebar-primary: oklch(0.72 0.19 155);
-  --sidebar-primary-foreground: oklch(0.13 0.005 285);
-  --sidebar-accent: oklch(0.18 0.005 285);
-  --sidebar-accent-foreground: oklch(0.95 0 0);
-  --sidebar-border: oklch(0.25 0.005 285);
-  --sidebar-ring: oklch(0.72 0.19 155);
+  --background: #1A1A1A;
+  --foreground: #F0F0F0;
+  --card: #222222;
+  --card-foreground: #F0F0F0;
+  --popover: #222222;
+  --popover-foreground: #F0F0F0;
+  --primary: #5CB85C;
+  --primary-foreground: #FFFFFF;
+  --secondary: #2A2A2A;
+  --secondary-foreground: #F0F0F0;
+  --muted: #2A2A2A;
+  --muted-foreground: #999999;
+  --accent: #5CB85C;
+  --accent-foreground: #FFFFFF;
+  --destructive: #D9534F;
+  --destructive-foreground: #FFFFFF;
+  --border: #3A3A3A;
+  --input: #2A2A2A;
+  --ring: #5CB85C;
+
+  --chart-1: #5CB85C;
+  --chart-2: #4A9AEF;
+  --chart-3: #F0AD4E;
+  --chart-4: #5BC0DE;
+  --chart-5: #E06B68;
+
+  --sidebar: #1A1A1A;
+  --sidebar-foreground: #F0F0F0;
+  --sidebar-primary: #5CB85C;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #2A2A2A;
+  --sidebar-accent-foreground: #F0F0F0;
+  --sidebar-border: #3A3A3A;
+  --sidebar-ring: #5CB85C;
+
+  --success: #5CB85C;
+  --success-foreground: #FFFFFF;
+  --warning: #F0AD4E;
+  --warning-foreground: #1A1A1A;
+  --critical: #D9534F;
+  --critical-foreground: #FFFFFF;
+  --info: #5BC0DE;
+  --info-foreground: #FFFFFF;
 }
 
 @theme inline {
-  --font-sans: 'Inter', 'Geist', 'Geist Fallback';
-  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-sans: var(--font-dm-sans), 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: var(--font-fira-code), 'SF Mono', 'Fira Code', 'Consolas', monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -140,5 +200,31 @@
   }
   body {
     @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+  }
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+  }
+  h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
   }
 }
